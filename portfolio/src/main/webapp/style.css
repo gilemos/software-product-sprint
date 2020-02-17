@@ -1,9 +1,144 @@
-#content {
+/* #content {
   margin-left: auto;
   margin-right: auto;
   width: 650px;
-}
+} */
 
 #greeting-container {
   margin-top: 20px;
+}
+
+#descriptionDiv {
+  margin-left: 50vw;
+}
+
+#mainHello {
+  text-align: left;
+  color: #211023;
+  font-size:70px;
+  padding-left:30px;
+  padding-top:30px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+#generalHeader {
+    text-align: center;
+    vertical-align: top;
+    color:white;
+    font-size:30px;
+    padding-top:15px;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0px;
+}
+
+#pinkCell {
+    background-color:rgb(235, 95, 62);
+}
+
+#whiteCell {
+    background-color:ghostwhite;
+}
+
+#greenCell {
+    background-color:rgb(97, 118, 107);
+}
+
+#greenCellFull {
+    background-color:rgb(97, 118, 107);
+    padding:10px;
+}
+
+#yellowCell {
+    background-color:rgb(236, 231, 206);
+    padding:20px;
+}
+
+#grayCell {
+    background-color:ghostwhite;
+    opacity: 0.5;
+}
+
+#opaquePinkCell {
+    background-color:rgb(235, 95, 62);
+}
+
+#pinkHeader {
+    color:rgb(235, 95, 62);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 50px;
+    text-align: left;
+    padding: 30px;
+    margin: 0px;
+}
+
+#normalText {
+    color:black;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    padding: 30px;
+}
+
+#normalTextNoPadding {
+    color:black;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    padding: 0px;
+}
+
+#roundImage {
+    border-radius: 5%;
+    align-content: center;
+    width:15vw;
+    height:15vw;
+    opacity:0.5;
+}
+
+body {
+    margin: 0px;
+}
+
+table {
+    table-layout: fixed;
+    margin:20px;
+}
+
+.fullTr {
+    height: 100vh;
+}
+
+.movingCell {
+    width:50vw;
+    transition-property: width;
+    transition-duration: 2s;
+}
+
+.movingCell:hover {
+    width:75vw;
+}
+
+.movingCell span{ display: none;}
+
+.movingCell:hover span{ display: inline;}
+
+.faded {
+    opacity:0.5;
+}
+
+.faded:hover{
+    opacity: 1;
+}
+
+.mainDiv {
+    width: 100vw;
+    height: 50vw;
+}
+
+.animatedCell {
+    background-color:rgb(235, 95, 62);
+    transition: background-color 4s;
+    will-change: background-color;
+}
+
+.animatedCell.is-visible {
+    background-color:black;
 }
