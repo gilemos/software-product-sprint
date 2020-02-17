@@ -1,15 +1,13 @@
-/* #content {
-  margin-left: auto;
-  margin-right: auto;
-  width: 650px;
-} */
+body {
+    margin: 0px;
+}
+
+table {
+    table-layout: fixed;
+}
 
 #greeting-container {
   margin-top: 20px;
-}
-
-#descriptionDiv {
-  margin-left: 50vw;
 }
 
 #mainHello {
@@ -25,6 +23,25 @@
   font-weight: 800;
 }
 
+#generalHeader {
+    text-align: center;
+    vertical-align: top;
+    color:white;
+    font-size:30px;
+    padding-top:15px;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0px;
+}
+
+#pinkHeader {
+    color:#FF3B3F;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 50px;
+    text-align: left;
+    padding: 30px;
+    margin: 0px;
+}
+
 #blinkingHoverWarning {
     color: #FF3B3F;
     text-align: left;
@@ -38,57 +55,7 @@
     padding-top:0px;
 }
 
-#generalHeader {
-    text-align: center;
-    vertical-align: top;
-    color:white;
-    font-size:30px;
-    padding-top:15px;
-    font-family: 'Montserrat', sans-serif;
-    margin: 0px;
-}
-
-#pinkCell {
-    background-color:#FF3B3F;
-}
-
-#whiteCell {
-    background-color:ghostwhite;
-}
-
-#greenCell {
-    background-color:rgb(97, 118, 107);
-}
-
-#greenCellFull {
-    background-color:rgb(97, 118, 107);
-    padding:10px;
-}
-
-#yellowCell {
-    background-color:black;
-    padding:20px;
-}
-
-#grayCell {
-    background-color:ghostwhite;
-    opacity: 0.5;
-}
-
-#opaquePinkCell {
-    background-color:#FF3B3F;
-}
-
-#pinkHeader {
-    color:#FF3B3F;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 50px;
-    text-align: left;
-    padding: 30px;
-    margin: 0px;
-}
-
-#normalText {
+#projectPresentationText {
     color:black;
     font-family: 'Montserrat', sans-serif;
     font-size: 20px;
@@ -102,34 +69,36 @@
     text-align:left;
 }
 
-#normalTextNoPadding {
+#greenCell {
+    background-color:rgb(97, 118, 107);
+    padding:10px;
+}
+
+.mainDiv {
+    width: 100vw;
+    height: 50vw;
+}
+
+.fullTr {
+    height: 95vh;
+}
+
+.normalWhiteText {
     color:white;
     font-family: 'Montserrat', sans-serif;
     font-size: 20px;
     padding: 0px;
 }
 
-#borderRow {
+.borderRow {
     width:100vh;
     height:23px;
     background-color:white;
 }
 
-#borderCell {
+.borderCell {
     width:23px;
     background-color:white;
-}
-
-body {
-    margin: 0px;
-}
-
-table {
-    table-layout: fixed;
-}
-
-.fullTr {
-    height: 95vh;
 }
 
 .movingCell {
@@ -154,13 +123,8 @@ table {
     opacity: 1;
 }
 
-.mainDiv {
-    width: 100vw;
-    height: 50vw;
-}
-
 .animatedCell {
-    background-color:#FF3B3F
+    background-color:#FF3B3F;
     transition: background-color 4s;
     will-change: background-color;
 }
