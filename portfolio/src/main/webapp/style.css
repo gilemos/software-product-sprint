@@ -15,10 +15,27 @@
 #mainHello {
   text-align: left;
   color: #211023;
-  font-size:70px;
+  font-size:90px;
   padding-left:30px;
   padding-top:30px;
+  margin-bottom: 0px;
   font-family: 'Montserrat', sans-serif;
+  text-shadow:1px 1px 1px ghostWhite;
+  animation: 2s ease-out 0s 1 smoothIn;
+  font-weight: 800;
+}
+
+#blinkingHoverWarning {
+    color: #FF3B3F;
+    text-align: left;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    opacity:0;
+    animation: blinkingText 2.5s 5;
+    padding-left:50px;
+    margin-top: 5px;
+    font-size:17px;
+    padding-top:0px;
 }
 
 #generalHeader {
@@ -32,7 +49,7 @@
 }
 
 #pinkCell {
-    background-color:rgb(235, 95, 62);
+    background-color:#FF3B3F;
 }
 
 #whiteCell {
@@ -49,7 +66,7 @@
 }
 
 #yellowCell {
-    background-color:rgb(236, 231, 206);
+    background-color:black;
     padding:20px;
 }
 
@@ -59,11 +76,11 @@
 }
 
 #opaquePinkCell {
-    background-color:rgb(235, 95, 62);
+    background-color:#FF3B3F;
 }
 
 #pinkHeader {
-    color:rgb(235, 95, 62);
+    color:#FF3B3F;
     font-family: 'Montserrat', sans-serif;
     font-size: 50px;
     text-align: left;
@@ -78,19 +95,29 @@
     padding: 30px;
 }
 
-#normalTextNoPadding {
+#mainDescriptionText {
     color:black;
+    font-family: 'Montserrat', sans-serif;
+    padding-left: 40px;
+    text-align:left;
+}
+
+#normalTextNoPadding {
+    color:white;
     font-family: 'Montserrat', sans-serif;
     font-size: 20px;
     padding: 0px;
 }
 
-#roundImage {
-    border-radius: 5%;
-    align-content: center;
-    width:15vw;
-    height:15vw;
-    opacity:0.5;
+#borderRow {
+    width:100vh;
+    height:23px;
+    background-color:white;
+}
+
+#borderCell {
+    width:23px;
+    background-color:white;
 }
 
 body {
@@ -99,21 +126,20 @@ body {
 
 table {
     table-layout: fixed;
-    margin:20px;
 }
 
 .fullTr {
-    height: 100vh;
+    height: 95vh;
 }
 
 .movingCell {
-    width:50vw;
+    width:45vw;
     transition-property: width;
     transition-duration: 2s;
 }
 
 .movingCell:hover {
-    width:75vw;
+    width:65vw;
 }
 
 .movingCell span{ display: none;}
@@ -134,11 +160,35 @@ table {
 }
 
 .animatedCell {
-    background-color:rgb(235, 95, 62);
+    background-color:#FF3B3F
     transition: background-color 4s;
     will-change: background-color;
 }
 
 .animatedCell.is-visible {
     background-color:black;
+}
+
+@keyframes smoothIn {
+    0% {
+        opacity:0;
+    }
+    100% {
+        opacity:1;
+    }
+}
+
+@keyframes blinkingText {
+    0% {
+        opacity:0;
+    }
+    45% {
+        opacity:1;
+    }
+    55% {
+        opacity:1;
+    }
+    100% {
+        opacity:0;
+    }
 }

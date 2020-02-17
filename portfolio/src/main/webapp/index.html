@@ -2,22 +2,41 @@
 <html>
   <head>
     <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
-    <title>Giovanna</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600,800&display=swap" rel="stylesheet">
+    <title>Giovanna's Portifolio</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
   </head>
   <body>
     <div class="mainDiv">
-        <table style="width:97vw; margin=5px">
+        <table style="width:100vw; margin=0px;">
+            <tr id="borderRow">
+                <td colspan="2">
+                    <p style="color:black; font-family: 'Montserrat', sans-serif; font-size:13px; font-weight:600; margin:0px; padding-top:5px; padding-bottom:0px; padding-left:20px; ">GIOVANNA LEMOS RIBEIRO</p>
+                </td>
+            </tr>
+        </table>
+        <table style="width:100vw; margin=0px;">
             <tr class="fullTr">
+                <td id="borderCell"></td>
                 <td class="movingCell" id="pinkCell">
-                    <span><p id="normalText" style="text-align:center">My name is GIOVANNA</p>
-                    <p style="text-align:center; color: #211023; font-size:20px; font-family: 'Montserrat', sans-serif;"> PROGRAMMER | RESEARCHER | DESIGN ENTHUSIAST </p>
+                    <span><p id="mainDescriptionText" style="font-size:40px; font-weight:600;" >HELLO! I'M GIOVANNA</p>
+                    <p id="mainDescriptionText" style="font-size:15px;font-weight:300;"> 
+                    I am a programmer from Brazil, living in the US.<br>
+                    I am passionate about design, data science and <br>
+                    projects that promote social impact. <br>
+                    Here, you can find a little bit of my work and interests.<br>
+                    Welcome to my portifolio!</p>
                     </span>
                 </td>
                 <td id="whiteCell">
-                    <h2 id="mainHello"><b>HELLO</b></h2>
+                    <h2 id="mainHello">WELL<br>COME</h2>
+                    <p id="blinkingHoverWarning"> Hover left</p>
+                </td>
+                <td id="borderCell">
+                    <img src="../Images/facebook.png" style="width:18px; height:18px; margin:0px; padding-left:0px; padding-right:0px; padding-bottom:10px;"><br>
+                    <img src="../Images/linkedin.png" style="width:18px; height:18px; margin:0px; padding-left:0px; padding-right:0px; padding-bottom:10px;"><br>
+                    <img src="../Images/github.png" style="width:18px; height:18px; margin:0px; padding-left:0px; padding-right:0px; padding-bottom:10px;"><br>
                 </td>
             </tr>
         </table>
@@ -28,17 +47,17 @@
                     <p id="normalText">Here are some projects <br>
                     I have worked on </p>
                 </td>
-                <td style="background-color:rgba(236, 231, 206, 0.5)">
-                    <table style="width:48vw; height:100vh; margin:0px; background-color:rgba(236, 231, 206, 0.5)">
+                <td style="background-color:ghostwhite">
+                    <table style="width:42vw; height:100vh; margin:35px; background-color:black">
                         <tr>
-                            <td class="faded", id="yellowCell", style="height:30vh;">
+                            <td class="faded", style="background-color:black; padding:20px; height:25vh;">
                                 <p id="normalTextNoPadding" style="font-size:20px">Travellama</p>
                                 <p id="normalTextNoPadding" style="font-size:10px">Travellama is an app that
                                     helps you organize a schedule for your travel! Browse attractions, generate
                                     an optimized schedule and get all the navigation information around a new city.
                                 </p>
                             </td>
-                            <td class="faded", id="yellowCell", style="height:30vh;">
+                            <td class="faded", style="background-color:black; padding:20px; height:25vh;">
                                 <p id="normalTextNoPadding" style="font-size:20px">FoxHealth</p>
                                 <p id="normalTextNoPadding" style="font-size:10px">Fox Health is an app that
                                     helps patients connect with other patients and their own doctors and get
@@ -47,13 +66,13 @@
                             </td>
                         </tr>
                         <tr>
-                            <td class="faded", id="yellowCell", style="height:30vh;">
+                            <td class="faded", style="background-color:black; padding:20px; height:25vh;">
                                 <p id="normalTextNoPadding" style="font-size:20px">Twitter</p>
                                 <p id="normalTextNoPadding" style="font-size:10px">This application is my adaptation
                                     of Twitter. In this app, you can log into your account and make real interactions
                                     with content and other users - interactions that will also exist in the real Twitter app.</p>
                             </td>
-                            <td class="faded", id="yellowCell", style="height:30vh;">
+                            <td class="faded", style="background-color:black; padding:20px; height:25vh;">
                                 <p id="normalTextNoPadding" style="font-size:20px">Pacman</p>
                                 <p id="normalTextNoPadding" style="font-size:10px">This project is the game Pacman,
                                     in which I used different artificial intelligence methods to make smarted ghosts 
@@ -61,7 +80,7 @@
                                 </p>
                         </tr>
                         <tr>
-                            <td colspan="2" class="faded", id="yellowCell", style="height:30vh;">
+                            <td class="faded", style="background-color:black; padding:20px; height:25vh;">
                                 <p id="normalTextNoPadding" style="font-size:20px">Intagram</p>
                                 <p id="normalTextNoPadding" style="font-size:10px">This application is my adaptation
                                     of Instagram. In this app, you can create your account and post contend and interact with 
