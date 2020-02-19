@@ -2,8 +2,17 @@ body {
     margin: 0px;
 }
 
+body, html {
+  height: 100%;
+}
+
 table {
     table-layout: fixed;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border-width: 0px;
 }
 
 #greeting-container {
@@ -36,9 +45,20 @@ table {
 #pinkHeader {
     color:#FF3B3F;
     font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
     font-size: 50px;
     text-align: left;
-    padding: 30px;
+    padding-left: 50px;
+    margin: 0px;
+}
+
+#pinkTriangles {
+    color:#FF3B3F;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    text-align: left;
+    padding-left: 50px;
     margin: 0px;
 }
 
@@ -58,8 +78,9 @@ table {
 #projectPresentationText {
     color:black;
     font-family: 'Montserrat', sans-serif;
-    font-size: 20px;
-    padding: 30px;
+    font-size: 18px;
+    padding-left: 53px;
+    font-weight: 300;
 }
 
 #mainDescriptionText {
@@ -74,31 +95,41 @@ table {
     padding:10px;
 }
 
+
 .mainDiv {
     width: 100vw;
     height: 50vw;
 }
 
 .fullTr {
-    height: 95vh;
+    height: 100vh;
 }
 
 .normalWhiteText {
     color:white;
     font-family: 'Montserrat', sans-serif;
     font-size: 20px;
-    padding: 0px;
+    text-align: center;
 }
 
 .borderRow {
     width:100vh;
-    height:23px;
+    height:27px;
     background-color:white;
 }
 
 .borderCell {
-    width:23px;
+    width:27px;
     background-color:white;
+}
+
+.borderBlackCell {
+    width:20px;
+    padding:0px;
+}
+
+.fullBlackRow {
+    height:20px;
 }
 
 .movingCell {
@@ -116,11 +147,14 @@ table {
 .movingCell:hover span{ display: inline;}
 
 .faded {
-    opacity:0.5;
+    background-color:black;
+    opacity: 0.8;
 }
 
 .faded:hover{
+    background-color:black;
     opacity: 1;
+    box-shadow: -3px -3px 2px 0 #353839, 3px 3px 2px 0 #353839;
 }
 
 .animatedCell {
@@ -131,6 +165,20 @@ table {
 
 .animatedCell.is-visible {
     background-color:black;
+}
+
+.parallax { 
+  /* The image used */
+  background-image: url('../Images/book.jpg');
+
+  /* Full height */
+  height: 95%; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 @keyframes smoothIn {
