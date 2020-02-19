@@ -32,16 +32,6 @@ table, th, td {
   font-weight: 800;
 }
 
-#generalHeader {
-    text-align: center;
-    vertical-align: top;
-    color:white;
-    font-size:30px;
-    padding-top:15px;
-    font-family: 'Montserrat', sans-serif;
-    margin: 0px;
-}
-
 #pinkHeader {
     color:#FF3B3F;
     font-family: 'Montserrat', sans-serif;
@@ -90,13 +80,7 @@ table, th, td {
     text-align:left;
 }
 
-#greenCell {
-    background-color:rgb(97, 118, 107);
-    padding:10px;
-}
-
-
-.mainDiv {
+#mainDiv {
     width: 100vw;
     height: 50vw;
 }
@@ -110,6 +94,7 @@ table, th, td {
     font-family: 'Montserrat', sans-serif;
     font-size: 20px;
     text-align: center;
+    padding:22px;
 }
 
 .borderRow {
@@ -121,15 +106,6 @@ table, th, td {
 .borderCell {
     width:27px;
     background-color:white;
-}
-
-.borderBlackCell {
-    width:20px;
-    padding:0px;
-}
-
-.fullBlackRow {
-    height:20px;
 }
 
 .movingCell {
@@ -168,13 +144,8 @@ table, th, td {
 }
 
 .parallax { 
-  /* The image used */
   background-image: url('../Images/book.jpg');
-
-  /* Full height */
   height: 95%; 
-
-  /* Create the parallax scrolling effect */
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
