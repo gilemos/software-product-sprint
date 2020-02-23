@@ -85,6 +85,13 @@ table, th, td {
     height: 50vw;
 }
 
+#quoteDiv {
+    height:55vh; 
+    background-color:rgba(255, 255, 255, 0.7); 
+    box-shadow: 5px 10px 18px #888888; 
+    border-radius: 5px;
+}
+
 .fullTr {
     height: 100vh;
 }
@@ -133,15 +140,6 @@ table, th, td {
     box-shadow: -3px -3px 2px 0 #353839, 3px 3px 2px 0 #353839;
 }
 
-.animatedCell {
-    background-color:#FF3B3F;
-    transition: background-color 4s;
-    will-change: background-color;
-}
-
-.animatedCell.is-visible {
-    background-color:black;
-}
 
 .parallax { 
   background-image: url('../Images/book.jpg');
