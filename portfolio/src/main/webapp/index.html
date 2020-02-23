@@ -1,18 +1,126 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="UTF-8">
-    <title>My Portfolio</title>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600,800&display=swap" rel="stylesheet">
+    <title>Giovanna's Portifolio</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <script src="script.js">
+    </script>
   </head>
   <body>
-    <div id="content">
-      <h1>My Portfolio</h1>
-      <p>This is my portfolio.</p>
-      <p>Click here to get a random message:</p>
-      <button onclick="addRandomGreeting()">Hello</button>
-      <div id="greeting-container"></div>
+    <div id="mainDiv">
+        <table style="width:100vw; margin=0px;">
+            <tr class="borderRow"></tr>
+        </table>
+        <table style="width:100vw; margin=0px;">
+            <tr class="fullTr">
+                <td class="borderCell"></td>
+                <td class="movingCell" style="background-color:#FF3B3F;">
+                    <span><p id="mainDescriptionText" style="font-size:40px; font-weight:600;" >HELLO! I'M GIOVANNA</p>
+                    <p id="mainDescriptionText" style="font-size:15px;font-weight:300;"> 
+                    /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\<br><br>
+                    I am a programmer from Brazil, living in the US. I am passionate<br>
+                    about design, data science and projects that promote social impact.<br>
+                    Here, you can find a little bit of my work and interests.<br>
+                    Welcome to my portifolio!</p>
+                    </span>
+                </td>
+                <td style="background-color:ghostwhite;">
+                    <h2 id="mainHello">WELL<br>COME</h2>
+                    <p id="blinkingHoverWarning"> Hover left</p>
+                </td>
+                <td class="borderCell">
+                    <a href="https://www.facebook.com/GiLemos42"><img src="../Images/facebook.png" style="width:18px; height:18px; margin:0px; padding-left:0px; padding-right:0px; padding-bottom:10px;"></a><br>
+                    <a href="https://www.linkedin.com/in/giovanna-lemos-ribeiro/"><img src="../Images/linkedin.png" style="width:18px; height:18px; margin:0px; padding-left:0px; padding-right:0px; padding-bottom:10px;"></a><br>
+                    <a href="https://github.com/gilemos"><img src="../Images/github.png" style="width:18px; height:18px; margin:0px; padding-left:0px; padding-right:0px; padding-bottom:10px;"></a><br>
+                </td>
+            </tr>
+        </table>
+
+        <div class="parallax">
+        <table style="width:100vw; margin=0px; background-size:100%; opacity:0.85;">
+            <tr style="height:80vh;">
+                <td class="borderCell"></td>
+                <td></td>
+                <td style="width:90vh;">
+                    <div id="quoteDiv">
+                        <p style="text-align:center; padding-top:27px; font-family: 'Montserrat', sans-serif; font-weight:300; font-size: 30px;"> Quote Of the Day 
+                            <button onclick="addRandomGreeting()" style="background-color:ghostwhite; align:center"><img src="../Images/feather.png" style="height:27px; width:27px;"></button></p>
+                        <p style="text-align:left; padding-left:25px; font-family: 'Montserrat', sans-serif; font-weight:800; font-size: 40px;">&ldquo;</p>
+                        <div id="greeting-container" style:"text-align:center; color:white; font-family: 'Montserrat', sans-serif; padding:20px;"></div>
+                        <p style="text-align:right; padding:25px; font-family: 'Montserrat', sans-serif; font-weight:800; font-size: 40px;">&rdquo;</p>
+                    </div>
+                </td>
+                <td></td>
+                <td class="borderCell"></td>
+            </tr>
+        </table>
+        </div>
+
+        <table style="width:100vw; background-color:ghostwhite;">
+            <tr class="fullTr">
+                <td class="borderCell"></td>
+                <td colspan="3" style="background-color:ghostwhite;border:14px solid black;">
+                    <p id="pinkHeader">PROJECTS<br></p>
+                    <p id="pinkTriangles">/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\</p>
+                    <p id="projectPresentationText">Here are some projects <br>
+                    I have worked on </p>
+                </td>
+                <td colspan="4" style="background-color:black; border:14px solid black;">
+                    <table style="border-width:0px; height:50vw; margin:0px; background-color:rgba(0, 0, 0, 0.8);">
+                        <tr>
+                            <td class="faded", style="padding:10px;">
+                                <a href="https://github.com/fbu-2019/Travel-Scheduler" style="text-decoration:none">
+                                <p class="normalWhiteText" style="font-size:20px;">Travellama</p>
+                                <p class="normalWhiteText" style="font-size:10px;">Travellama is an app that
+                                    helps you organize a schedule for your travel! Browse attractions, generate
+                                    an optimized schedule and get all the navigation information around a new city.
+                                </p>
+                                </a>
+                            </td>
+                            <td class="faded", style="padding:10px;">
+                                <a href="https://github.com/gilemos/fbu-insta" style="text-decoration:none">
+                                <p class="normalWhiteText" style="font-size:20px;">FoxHealth</p>
+                                <p class="normalWhiteText" style="font-size:10px;">Fox Health is an app that
+                                    helps patients connect with other patients and their own doctors and get
+                                    personalized and trustworty information about healthcare. (coming soon to github)
+                                </p>
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="faded", style="padding:10px;">
+                                <a href="https://github.com/gilemos/Twitter" style="text-decoration:none">
+                                <p class="normalWhiteText" style="font-size:20px;">Twitter</p>
+                                <p class="normalWhiteText" style="font-size:10px;">This application is my adaptation
+                                    of Twitter. In this app, you can log into your account and make real interactions
+                                    with content and other users - interactions that will also exist in the real Twitter app.</p>
+                                </a>
+                            </td>
+                            <td class="faded", style="padding:10px;">
+                                <a href="https://github.com/gilemos/fbu-insta" style="text-decoration:none">
+                                <p class="normalWhiteText" style="font-size:20px;">Pacman</p>
+                                <p class="normalWhiteText" style="font-size:10px;">This project is the game Pacman,
+                                    in which I used different artificial intelligence methods to make smarted ghosts 
+                                    and even an automated smart Pacman (comming soon to github)
+                                </p>
+                                </a>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="faded", style="padding:10px;">
+                                <a href="https://github.com/gilemos/fbu-insta" style="text-decoration:none">
+                                <p class="normalWhiteText" style="font-size:20px; padding:22px;">Instagram</p>
+                                <p class="normalWhiteText" style="font-size:10px; padding:22px;">This application is my adaptation
+                                    of Instagram. In this app, you can create your account and post content and interact with 
+                                    users. </p>
+                                </a>
+                        </tr>
+                    </table>
+                </td>
+                <td class="borderCell"></td>
+            </tr>
+        </table>
     </div>
   </body>
 </html>
