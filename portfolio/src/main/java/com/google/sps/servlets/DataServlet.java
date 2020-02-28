@@ -31,9 +31,6 @@ public class DataServlet extends HttpServlet {
     @Override
     public void init() {
         comments = new ArrayList<>();
-        comments.add("This is the placeholder comment 1");
-        comments.add("This is the placehonder comment 2");
-        comments.add("This is the placeholder comment 3");
     }
 
     @Override
@@ -48,4 +45,18 @@ public class DataServlet extends HttpServlet {
         String json = gson.toJson(arr);
         return json;
     }
+
+    @Override
+    public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
+
+      String name = request.getParameter("name");
+      String comment = request.getParameter("comment");
+      name = name.toUpperCase();
+
+      String finalComment = name + "\n" + "\n" + comment;
+
+      comments.add(finalComment);
+      response.sendRedirect("/pear.html");
+  }
+
 }

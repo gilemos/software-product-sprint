@@ -109,9 +109,9 @@ table, th, td {
     width:85%;
     height:50px;
     padding:10px;
-    box-shadow:0 2px 8px 0 rgba(0, 0, 0, 0.2), 0 4px 10px 0 rgba(0, 0, 0, 0.19);
+    box-shadow:0 2px 8px 0 rgba(0, 0, 0, 0.2), 0 2px 8px 0 rgba(0, 0, 0, 0.19);
     font-family: 'Montserrat', sans-serif;
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 300;
     padding-left:25px;
     padding-top:10px;
