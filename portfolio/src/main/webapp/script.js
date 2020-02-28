@@ -27,6 +27,15 @@ function addRandomGreeting() {
   greetingContainer.innerText = greeting;
 }
 
+/** Getting my name to appear at the top
+ */
+
+ function getName() {
+  fetch('/data').then(response => response.text()).then((name) => {
+    document.getElementById('data-container').innerText = name;
+  });
+}
+
 /**
   * Function to show elements when you reach them
  */
