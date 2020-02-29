@@ -50,18 +50,15 @@ public class DataServlet extends HttpServlet {
         }
 
         Gson gson = new Gson();
-
         response.setContentType("application/json;");
         response.getWriter().println(gson.toJson(comments));
     }
 
     @Override
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
-
-        String name = request.getParameter("name");
+        String upperCaseName = request.getParameter("name").toUpperCase();
         String comment = request.getParameter("comment");
-        name = name.toUpperCase();
-        String finalComment = name + "\n" + "\n" + comment;
+        String finalComment = upperCaseName + "\n" + "\n" + comment;
 
         Entity taskEntity = new Entity("Task");
         taskEntity.setProperty("comment", finalComment);
@@ -69,6 +66,5 @@ public class DataServlet extends HttpServlet {
         DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
         datastore.put(taskEntity);
         response.sendRedirect("/pear.html");
-  }
-
+    }
 }
