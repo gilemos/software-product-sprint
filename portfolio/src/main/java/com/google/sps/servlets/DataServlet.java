@@ -32,16 +32,17 @@ import java.util.*;
 @WebServlet("/data")
 public class DataServlet extends HttpServlet {
 
+    private DatastoreService datastore;
+
     @Override
     public void init() {
+        datastore = DatastoreServiceFactory.getDatastoreService();
     }
 
     @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
         Query query = new Query("Task");
-
-        DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
-        PreparedQuery results = datastore.prepare(query);
+        PreparedQuery results = this.datastore.prepare(query);
 
         List<String> comments = new ArrayList<>();
         for (Entity entity : results.asIterable()) {
@@ -63,8 +64,7 @@ public class DataServlet extends HttpServlet {
         Entity taskEntity = new Entity("Task");
         taskEntity.setProperty("comment", finalComment);
 
-        DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
-        datastore.put(taskEntity);
+        this.datastore.put(taskEntity);
         response.sendRedirect("/pear.html");
     }
 }
