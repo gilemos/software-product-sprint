@@ -51,7 +51,7 @@ table, th, td {
 }
 
 #commentCell {
-    height:50px;
+    min-height:50px;
 }
 
 #commentDiv {
@@ -59,7 +59,7 @@ table, th, td {
     width:85%;
     min-height:50px;
     padding:10px;
-    box-shadow:0 2px 8px 0 rgba(0, 0, 0, 0.2), 0 2px 8px 0 rgba(0, 0, 0, 0.19);
+    box-shadow:0 2px 8px 0 rgba(255, 59, 63, 0.2), 0 2px 8px 0 rgba(255, 59, 63, 0.19);
     font-family: 'Montserrat', sans-serif;
     font-size: 12px;
     font-weight: 300;

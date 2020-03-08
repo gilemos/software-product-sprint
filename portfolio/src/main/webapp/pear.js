@@ -11,13 +11,22 @@ function getComments() {
 }
 
 function createListElement(comment) {
-    //String scoreString = String.valueOf(comment.sentimentScore);
-    //System.out.println(scoreString);
 
     const divElement = document.createElement('div');
     divElement.setAttribute("id", "commentDiv");
 
-    divElement.innerText = comment.message + " " + comment.sentimentScore;
+    var score = comment.sentimentScore;
+    if(score <= -0.5) {
+        divElement.setAttribute("style", "background-color: rgba(255, 59, 63, 0.3);");
+    } else if (score <= 0) {
+        divElement.setAttribute("style", "background-color: rgba(255, 59, 63, 0.5);");
+    } else if (score <= 0.5) {
+        divElement.setAttribute("style", "background-color: rgba(255, 59, 63, 0.7);");
+    } else {
+        divElement.setAttribute("style", "background-color: rgba(255, 59, 63, 0.9);");
+    }
+
+    divElement.innerText = comment.message + " ";
 
     return divElement;
 }
