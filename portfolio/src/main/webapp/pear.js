@@ -2,19 +2,22 @@
  */
 
 function getComments() {
-    fetch('/data').then(response => response.json()).then((stats) => { 
-        const statsListElement = document.getElementById('commentCell');
-        statsListElement.innerHTML = '';
-        for (index = 0; index < stats.length; index++) { 
-            log(stats[index]);
-            statsListElement.appendChild(createListElement(stats[index]));
-        }
+    fetch('/data').then(response => response.json()).then((comments) => { 
+        const commentElement = document.getElementById('commentCell');
+        comments.forEach((comment) => {
+            commentElement.appendChild(createListElement(comment));
+        })
     });
 }
 
-function createListElement(text) {
+function createListElement(comment) {
+    //String scoreString = String.valueOf(comment.sentimentScore);
+    //System.out.println(scoreString);
+
     const divElement = document.createElement('div');
     divElement.setAttribute("id", "commentDiv");
-    divElement.innerText = text;
+
+    divElement.innerText = comment.message + " " + comment.sentimentScore;
+
     return divElement;
 }

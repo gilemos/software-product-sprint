@@ -57,7 +57,7 @@ table, th, td {
 #commentDiv {
     margin:20px;
     width:85%;
-    height:50px;
+    min-height:50px;
     padding:10px;
     box-shadow:0 2px 8px 0 rgba(0, 0, 0, 0.2), 0 2px 8px 0 rgba(0, 0, 0, 0.19);
     font-family: 'Montserrat', sans-serif;
