@@ -14,6 +14,9 @@
 
 package com.google.sps.servlets;
 
+import com.google.cloud.language.v1.Document;
+import com.google.cloud.language.v1.LanguageServiceClient;
+import com.google.cloud.language.v1.Sentiment;
 import com.google.appengine.api.datastore.DatastoreService;
 import com.google.appengine.api.datastore.DatastoreServiceFactory;
 import com.google.appengine.api.datastore.Entity;
@@ -61,10 +64,17 @@ public class DataServlet extends HttpServlet {
         String comment = request.getParameter("comment");
         String finalComment = upperCaseName + "\n" + "\n" + comment;
 
+        Document doc = Document.newBuilder().setContent(comment).setType(Document.Type.PLAIN_TEXT).build();
+        LanguageServiceClient languageService = LanguageServiceClient.create();
+        Sentiment sentiment = languageService.analyzeSentiment(doc).getDocumentSentiment();
+        float score = sentiment.getScore();
+        languageService.close();
         Entity taskEntity = new Entity("Task");
         taskEntity.setProperty("comment", finalComment);
-
+        taskEntity.setProperty("score", score);
+        System.out.println(score);
         this.datastore.put(taskEntity);
         response.sendRedirect("/pear.html");
+
     }
 }

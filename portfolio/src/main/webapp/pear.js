@@ -6,6 +6,7 @@ function getComments() {
         const statsListElement = document.getElementById('commentCell');
         statsListElement.innerHTML = '';
         for (index = 0; index < stats.length; index++) { 
+            log(stats[index]);
             statsListElement.appendChild(createListElement(stats[index]));
         }
     });
