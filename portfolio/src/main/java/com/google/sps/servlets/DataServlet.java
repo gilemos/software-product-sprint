@@ -14,6 +14,7 @@
 
 package com.google.sps.servlets;
 
+import com.google.sps.data.Comment;
 import com.google.cloud.language.v1.Document;
 import com.google.cloud.language.v1.LanguageServiceClient;
 import com.google.cloud.language.v1.Sentiment;
@@ -47,10 +48,17 @@ public class DataServlet extends HttpServlet {
         Query query = new Query("Task");
         PreparedQuery results = this.datastore.prepare(query);
 
-        List<String> comments = new ArrayList<>();
+        List<Comment> comments = new ArrayList<>();
         for (Entity entity : results.asIterable()) {
-            String comment = (String) entity.getProperty("comment");
-            comments.add(comment);
+            String message = (String) entity.getProperty("comment");
+            double score = 0;
+            try {
+                score = (double) entity.getProperty("score");
+            } catch (java.lang.NullPointerException exception) {
+                score = 0.0;
+            }
+            Comment newComment = new Comment(message, score);
+            comments.add(newComment);
         }
 
         Gson gson = new Gson();
