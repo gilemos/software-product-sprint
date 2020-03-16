@@ -2,18 +2,31 @@
  */
 
 function getComments() {
-    fetch('/data').then(response => response.json()).then((stats) => { 
-        const statsListElement = document.getElementById('commentCell');
-        statsListElement.innerHTML = '';
-        for (index = 0; index < stats.length; index++) { 
-            statsListElement.appendChild(createListElement(stats[index]));
-        }
+    fetch('/data').then(response => response.json()).then((comments) => { 
+        const commentElement = document.getElementById('commentCell');
+        comments.forEach((comment) => {
+            commentElement.appendChild(createListElement(comment));
+        })
     });
 }
 
-function createListElement(text) {
+function createListElement(comment) {
+
     const divElement = document.createElement('div');
     divElement.setAttribute("id", "commentDiv");
-    divElement.innerText = text;
+
+    var score = comment.sentimentScore;
+    if(score <= -0.5) {
+        divElement.setAttribute("style", "background-color: rgba(255, 59, 63, 0.3);");
+    } else if (score <= 0) {
+        divElement.setAttribute("style", "background-color: rgba(255, 59, 63, 0.5);");
+    } else if (score <= 0.5) {
+        divElement.setAttribute("style", "background-color: rgba(255, 59, 63, 0.7);");
+    } else {
+        divElement.setAttribute("style", "background-color: rgba(255, 59, 63, 0.9);");
+    }
+
+    divElement.innerText = comment.message + " ";
+
     return divElement;
 }
