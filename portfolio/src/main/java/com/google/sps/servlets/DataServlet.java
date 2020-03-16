@@ -73,12 +73,10 @@ public class DataServlet extends HttpServlet {
         String finalComment = upperCaseName + "\n" + "\n" + comment;
 
         Document doc = Document.newBuilder().setContent(comment).setType(Document.Type.PLAIN_TEXT).build();
-        float score = 0.0;
-        try (LanguageServiceClient languageService = LanguageServiceClient.create()) {
-            Sentiment sentiment = languageService.analyzeSentiment(doc).getDocumentSentiment();
-            score = sentiment.getScore();
-        }
-        
+        LanguageServiceClient languageService = LanguageServiceClient.create();
+        Sentiment sentiment = languageService.analyzeSentiment(doc).getDocumentSentiment();
+        float score = sentiment.getScore();
+        languageService.close();
         Entity taskEntity = new Entity("Task");
         taskEntity.setProperty("comment", finalComment);
         taskEntity.setProperty("score", score);
