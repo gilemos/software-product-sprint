@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600,800&display=swap" rel="stylesheet">
+        <title>pear.</title>
+        <link rel="stylesheet" href="styleProjects.css">
+        <script src="pear.js">
+        </script>
+    </head>
+    <body style="background-color:white" onload="getComments()">
+        <table>
+            <tr>
+                <td colspan="5" id="borderRow">
+                    <a href="index.html"><img src="../Images/back.png" style="width:20px; height:20px; margin-left:40px; margin-top:40px;"></a>
+                </td>
+            </tr>
+        </table>
+
+        <div class="sidenav">
+            <a href="#intro">Introduction</a>
+            <a href="#funcs">Functions</a>
+            <a href="#tech">Technologies</a>
+            <a href="#comment">Comments</a>
+        </div>
+
+        <div class="main">
+            <div id="intro">
+                <table style="margin-bottom:20px;">
+                    <tr style="height:15vw;">
+                        <td align="center">
+                            <div align="center" style="width:120px; height:120px; border-radius:50px; box-shadow: 5px 5px 4px grey; overflow: hidden;">
+                                <img src="../Images/pearLogoSquared.png" id="profileImage">
+                            </div>
+                        </td>
+                        <td colspan="2">
+                            <p class="headerText">pear.</p>
+                            <p class="descriptionText">Welcome to pear., the Private Emergency-Assisted Response Application, designed to support survivors of sexual violence and trauma navigate different resources with ease</p>
+                        </td>
+                        <td class="borderCell"></td>
+                    </tr>
+                </table>
+
+                <table style="height:36vw;">
+                    <tr>
+                        <td rowspan="2" style="width:20vw;" align="center">
+                            <div class="imageDiv">
+                            <img src="../Images/screenPear1.png" class="projectImage">
+                            </div>
+                        </td>
+                        <td style="width:20vw;" align="center">
+                            <div id="imageDivBig">
+                            <img src="../Images/pearSmallScreen1.png" class="projectImage">
+                            </div>
+                        </td>
+                        <td rowspan="2" style="width:20vw;" align="center">
+                            <div class="imageDiv">
+                            <img src="../Images/screenPear3.png" class="projectImage">
+                            </div>
+                        </td>
+                        <td rowspan="2" class="borderCell"></td>
+                    </tr>
+                    <tr>
+                        <td style="width:20vw;" align="center">
+                            <div id="imageDivSmall">
+                            <img src="../Images/pearMap.png" class="projectImage">
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <div id="funcs">
+                <p class="bigHeader" style="margin-top:40px;">FUNCTIONALITIES</p>
+                <ul class="descriptionText" style="padding-right:15vw; padding-left:40px;">
+                    <li><b>Grounding exercises:</b> 
+                    Functions to calm users down and provide helpful tips in Emergency Situations. 
+                    This methodology has been used by trauma informed specialists and it ensures that 
+                    the user can focus on their environment instead of their own thoughts. <br><br></li>
+                    <li><b>Helplines: </b>
+                    An easy-to-access list of helpful resources where people can find help and 
+                    support. Those resources include victim advocacy organizations and emergency 
+                    text lines. Moreover, we included an one-click automatic messaging to all of 
+                    the user's emergency contacts. <br><br></li>
+                    <li><b>Emergency resources: </b>
+                    The app includes a map (with the option of navigation) of all nearby 
+                    hospitals. <br><br></li>
+                    <li><b>Navigation to safe locations: </b>
+                    In case of an emergency when a user is walking on the street, pear. 
+                    will provide navigation to the best "safe location" close to you - 
+                    all with one click. "Safe locations" may include restaurants or 
+                    hospitals. In order to find the best safe location, pear. takes 
+                    into account both the proximity to the current location of the 
+                    user and the safety of the trajectory there, using AI to find the 
+                    best possible place and route. The navigation includes a map with 
+                    the highlighted path, as well as an audio giving the directions. <br><br></li>
+                    <li><b>Incognito Mode: </b>
+                    pear. allows you to go to incognito mode while using the app. 
+                    At any time, you can click one button and go to a page that mimics 
+                    a food delivery app, which guarantees the user's safety and privacy. <br><br></li>
+                    <li><b>Angela: </b>
+                    Fake caller app for the user to safely get away from uncomfortable or 
+                    potentially problematic situations. <br></li>
+                </ul>
+            </div>
+
+            <div id="tech">
+            </div>
+
+            <div id="comment">
+                <table style="margin-top:20px;">
+                    <tr>
+                        <td>
+                            <p class="bigHeader">COMMENTS</p>
+                        </td>
+                        <td class="borderCell"></td>
+                    </tr>
+                </table>
+
+                <table>
+                    <tr>
+                        <td style="padding-left:50px;">
+                            <form action="/data" method="POST" target="_top">
+                                <input type="text" name="name" placeholder="How should I call you?" style="width:92%; font-family:'Montserrat', sans-serif; font-weight:300; color:gray; ">
+                                <br><br>
+                                <input type="text" name="comment" placeholder="Write a comment about this project!" style="width:92%; height:70px; font-family:'Montserrat', sans-serif; font-weight:300; color:gray; ">
+                                <br><br>
+                                <input type="submit" value="Submit">
+                            </form>
+                        </td>
+                        <td class="borderCell"></td>
+                    </tr>
+                </table>
+
+                <table style="margin:20px;">
+                    <tr>
+                        <td id="commentCell">
+                        </td>
+                        <td class="borderCell"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </body>
+</html>
