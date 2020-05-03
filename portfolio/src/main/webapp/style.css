@@ -53,19 +53,6 @@ table, th, td {
     margin: 0px;
 }
 
-#blinkingHoverWarning {
-    color: #FF3B3F;
-    text-align: left;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 300;
-    opacity:0;
-    animation: blinkingText 2.5s 5;
-    padding-left:50px;
-    margin-top: 5px;
-    font-size:17px;
-    padding-top:0px;
-}
-
 #projectPresentationText {
     color:black;
     font-family: 'Montserrat', sans-serif;
@@ -93,7 +80,6 @@ table, th, td {
     font-size:50px; 
     font-weight:400;
     margin-bottom: 5px;
-    padding-top: 20px;
     width: 480px;
     opacity: 0;
     transition: 2s;
@@ -131,12 +117,11 @@ table, th, td {
 #movingcell {
     width:45%;
     transition: 2s;
-    background-color:#FF3B3F;
+    background-image: linear-gradient(#FF3B3F, #FF3B3F, #E23076, #AA4695);
 }
 
 #gifDiv {
     width: 0%;
-    height: 0%;
     opacity: 0;
     transition: 1.4s;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -162,7 +147,7 @@ table, th, td {
 }
 
 .doubleTr {
-    height: 200vh;
+    height: 280vh;
 }
 
 .nameHeader {
