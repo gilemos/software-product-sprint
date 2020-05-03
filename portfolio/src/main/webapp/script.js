@@ -32,15 +32,13 @@ window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
   if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-    document.getElementById("movingcell").style.width = "95%";
+    document.getElementById("movingcell").style.width = "100%";
     document.getElementById("mainHello").style.opacity = 0;
     document.getElementById("gifDiv").style.width = "50%";
-    document.getElementById("gifDiv").style.height = "50%";
   } else {
     document.getElementById("movingcell").style.width = "45%";
     document.getElementById("mainHello").style.opacity = 1;
     document.getElementById("gifDiv").style.width = "0%";
-    document.getElementById("gifDiv").style.height = "0%";
   }
 
 
