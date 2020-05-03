@@ -3,7 +3,7 @@ body {
 }
 
 body, html {
-  height: 100%;
+    height: 100%;
 }
 
 table {
@@ -24,11 +24,12 @@ table, th, td {
   color: #211023;
   font-size:90px;
   padding-left:30px;
-  padding-top:30px;
+  padding-top:27vh;
   margin-bottom: 0px;
   font-family: 'Montserrat', sans-serif;
   text-shadow:1px 1px 1px ghostWhite;
-  animation: 2s ease-out 0s 1 smoothIn;
+  animation: 1s ease-out 0s 1 smoothIn;
+  transition: 1s;
   font-weight: 800;
 }
 
@@ -73,12 +74,47 @@ table, th, td {
     font-weight: 300;
 }
 
-#mainDescriptionText {
+#miniBioText {
     color:black;
     font-family: 'Montserrat', sans-serif;
-    padding-left: 40px;
-    text-align:left;
+    text-align:justify;
+    font-size:15px;
+    font-weight:400;
+    line-height: 150%;
+    width: 480px;
+    opacity: 0;
+    transition: 2.2s;
 }
+
+#miniBioHeader {
+    color:black;
+    font-family: 'Bebas Neue', cursive;
+    text-align:justify;
+    font-size:50px; 
+    font-weight:400;
+    margin-bottom: 5px;
+    padding-top: 20px;
+    width: 480px;
+    opacity: 0;
+    transition: 2s;
+}
+
+#bioWavyLine {
+    opacity: 0;
+    width:20%; 
+    height:10px; 
+    margin:0px;
+    padding-bottom:30px;
+    transition: 2.1s;
+}
+
+#waveGif {
+    width:50%; 
+    padding:10px;
+    opacity: 0;
+    transition: 2.5s;
+}
+
 
 #mainDiv {
     width: 100vw;
@@ -92,8 +128,41 @@ table, th, td {
     border-radius: 5px;
 }
 
+#movingcell {
+    width:45%;
+    transition: 2s;
+    background-color:#FF3B3F;
+}
+
+#gifDiv {
+    width: 0%;
+    height: 0%;
+    opacity: 0;
+    transition: 1.4s;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: white;
+    border-style: solid;
+    border-width: 10px;
+    border-color:ghostwhite;
+    margin-bottom:30px;
+    text-align: center;
+}
+
+#gifDescriptDiv {
+    background-color:ghostwhite;
+    padding:5px;
+    height:20%;
+    width:100%;
+    opacity: 0;
+    transition: 1.4s;
+}
+
 .fullTr {
     height: 100vh;
+}
+
+.doubleTr {
+    height: 200vh;
 }
 
 .nameHeader {
@@ -123,21 +192,8 @@ table, th, td {
 .borderCell {
     width:27px;
     background-color:white;
+    padding-top:40vh;
 }
-
-.movingCell {
-    width:45vw;
-    transition-property: width;
-    transition-duration: 2s;
-}
-
-.movingCell:hover {
-    width:65vw;
-}
-
-.movingCell span{ display: none;}
-
-.movingCell:hover span{ display: inline;}
 
 .faded {
     background-color:black;

@@ -26,3 +26,38 @@ function addRandomGreeting() {
     const greetingContainer = document.getElementById('greeting-container');
     greetingContainer.innerText = greeting;
 }
+
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+    document.getElementById("movingcell").style.width = "95%";
+    document.getElementById("mainHello").style.opacity = 0;
+    document.getElementById("gifDiv").style.width = "50%";
+    document.getElementById("gifDiv").style.height = "50%";
+  } else {
+    document.getElementById("movingcell").style.width = "45%";
+    document.getElementById("mainHello").style.opacity = 1;
+    document.getElementById("gifDiv").style.width = "0%";
+    document.getElementById("gifDiv").style.height = "0%";
+  }
+
+
+  if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
+    document.getElementById("miniBioText").style.opacity = 1;
+    document.getElementById("bioWavyLine").style.opacity = 1;
+    document.getElementById("miniBioHeader").style.opacity = 1;
+    document.getElementById("waveGif").style.opacity = 1;
+    document.getElementById("gifDiv").style.opacity = 1;
+    document.getElementById("gifDescriptDiv").style.opacity = 1;
+  } else {
+    document.getElementById("miniBioText").style.opacity = 0;
+    document.getElementById("bioWavyLine").style.opacity = 0;
+    document.getElementById("miniBioHeader").style.opacity = 0;
+    document.getElementById("waveGif").style.opacity = 0;
+    document.getElementById("gifDiv").style.opacity = 0;
+    document.getElementById("gifDescriptDiv").style.opacity = 0;
+  }
+
+}
