@@ -30,7 +30,6 @@ import java.lang.Number;
 
 public final class FindMeetingQuery {
     public Collection<TimeRange> query(Collection<Event> events, MeetingRequest request) {
-      
         Collection<String> attendees = request.getAttendees();
         TreeMap<Integer, Integer> eventHash = new TreeMap<>();
         int lastEnd = 0;
@@ -92,5 +91,6 @@ public final class FindMeetingQuery {
             timeRanges.add(newTimeRange);
         }
       return timeRanges;
+
   }
 }
