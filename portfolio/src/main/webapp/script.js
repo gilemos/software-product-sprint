@@ -31,31 +31,61 @@ function addRandomGreeting() {
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
-  if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-    document.getElementById("movingcell").style.width = "100%";
-    document.getElementById("mainHello").style.opacity = 0;
-    document.getElementById("gifDiv").style.width = "50%";
-  } else {
-    document.getElementById("movingcell").style.width = "45%";
-    document.getElementById("mainHello").style.opacity = 1;
-    document.getElementById("gifDiv").style.width = "0%";
-  }
+    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        document.getElementById("movingcell").style.width = "100%";
+        document.getElementById("mainHello").style.opacity = 0;
+        document.getElementById("mainHello").style.width = "0%";
+        //document.getElementById("gifDiv").style.width = "50%";
+        document.getElementById("socialMediaLinksDiv").style.opacity = 0;
+    } else {
+        document.getElementById("movingcell").style.width = "45%";
+        document.getElementById("mainHello").style.width = "45%";
+        document.getElementById("mainHello").style.opacity = 1;
+        document.getElementById("mainHello").style.display= "block";
+        //document.getElementById("gifDiv").style.width = "0%";
+        document.getElementById("socialMediaLinksDiv").style.opacity = 1;
+        document.getElementById("socialMediaLinksDiv").style.display = "block";
+    }
 
 
-  if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
-    document.getElementById("miniBioText").style.opacity = 1;
-    document.getElementById("bioWavyLine").style.opacity = 1;
-    document.getElementById("miniBioHeader").style.opacity = 1;
-    document.getElementById("waveGif").style.opacity = 1;
-    document.getElementById("gifDiv").style.opacity = 1;
-    document.getElementById("gifDescriptDiv").style.opacity = 1;
-  } else {
-    document.getElementById("miniBioText").style.opacity = 0;
-    document.getElementById("bioWavyLine").style.opacity = 0;
-    document.getElementById("miniBioHeader").style.opacity = 0;
-    document.getElementById("waveGif").style.opacity = 0;
-    document.getElementById("gifDiv").style.opacity = 0;
-    document.getElementById("gifDescriptDiv").style.opacity = 0;
-  }
+    if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
+        document.getElementById("miniBioText").style.opacity = 1;
+        document.getElementById("bioWavyLine").style.opacity = 1;
+        document.getElementById("miniBioHeader").style.opacity = 1;
+        document.getElementById("waveGif").style.opacity = 1;
+        document.getElementById("gifDiv").style.opacity = 1;
+        document.getElementById("gifDescriptDiv").style.opacity = 1;
+        document.getElementById("mainHello").style.display= "none";
+        document.getElementById("socialMediaLinksDiv").style.display = "none";
+    } else {
+        document.getElementById("miniBioText").style.opacity = 0;
+        document.getElementById("bioWavyLine").style.opacity = 0;
+        document.getElementById("miniBioHeader").style.opacity = 0;
+        document.getElementById("waveGif").style.opacity = 0;
+        document.getElementById("gifDiv").style.opacity = 0;
+        document.getElementById("gifDescriptDiv").style.opacity = 0;
+    }
+
+    if (document.body.scrollTop > 900 || document.documentElement.scrollTop > 900) {
+        document.getElementById("miniBioText").style.opacity = 0;
+        document.getElementById("bioWavyLine").style.opacity = 0;
+        document.getElementById("miniBioHeader").style.opacity = 0;
+        document.getElementById("waveGif").style.opacity = 0;
+        document.getElementById("gifDiv").style.opacity = 0;
+        document.getElementById("gifDescriptDiv").style.opacity = 0;
+    }
+
+    if ( document.body.scrollTop > 1300 || document.documentElement.scrollTop > 1300) {
+        document.getElementById("parallaxWhite").style.height = "800px";
+        document.getElementById("parallaxBlack").style.height = "800px";
+    } else {
+        document.getElementById("parallaxWhite").style.height = "0px";
+        document.getElementById("parallaxBlack").style.height = "0px";
+    }
+
+    if ( document.body.scrollTop > 1500 || document.documentElement.scrollTop > 1500) {
+        document.getElementById("parallaxWhite").style.height = "0px";
+        document.getElementById("parallaxBlack").style.height = "0px";
+    }
 
 }
